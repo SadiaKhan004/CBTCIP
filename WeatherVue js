@@ -1,0 +1,47 @@
+let City = document.getElementById("City");
+let image = document.getElementById("img");
+let temperature = document.getElementById("temp");
+let weathertype = document.getElementById("weathertype");
+const API_key = "759f5cda62edcd09752ebbcaff2b6dc9";
+
+const information = async function () {
+    let input = document.getElementById("location").value;
+    let getWeatherInformation = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${API_key}&units=metric`);
+    console.log(getWeatherInformation);
+    let jsondata = await getWeatherInformation.json();
+    console.log(jsondata);
+    console.log(jsondata.name)
+    if (jsondata.cod == 400) {
+        alert("Enter location");
+        City.innerHTML = "";
+        temperature.innerHTML = "";
+        weathertype.innerHTML = "";
+    }
+    if (jsondata.cod == 404) {
+        alert("Enter Correct location");
+        City.innerHTML = "";
+        temperature.innerHTML = "";
+        weathertype.innerHTML = "";
+    }
+    City.innerHTML = jsondata.name;
+    temp.innerHTML = Math.floor(jsondata.main.temp) + "°C";
+    weathertype.innerHTML = jsondata.weather[0].main;
+
+    if (weathertype.innerHTML == "Haze") {
+        image.src = "Haze.png";
+    }
+    else if (weathertype.innerHTML == "Clouds") {
+        image.src = "clouds.png";
+    }
+    else if (weathertype.innerHTML == "Rainy") {
+        image.src = "rainy.png";
+    }
+    else if (weathertype.innerHTML == "Stormy") {
+        image.src = "storm.png";
+    }
+    else if (weathertype.innerHTML == "Clear") {
+        image.src = "clear.png";
+    }
+
+}
+document.querySelector("button").addEventListener("click", information);
