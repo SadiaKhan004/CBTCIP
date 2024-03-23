@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+</style>
+
+<body>
+    <div class="portfolio">
+        <div class="navigation-bar">
+            <ul>
+                <li><a href="#" class="active">Portfolio</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Hello, I'm Sadia Khan</h1>
+            <p>a passionate web developer enthusiast eager to explore the endless possibilities of web development. I am
+                eager to delve deeper into the world of web development, I'm committed to mastering the tools and
+                technologies that drive the modern web</p>
+            <div class="btn">
+                <button>Download CV</button>
+            </div>
+        </div>
+
+
+
+        <div class="skills">
+            <h2>My Expertise</h2>
+        </div>
+        <div class="python">
+            <div class="description1">
+                <p>Skilled in Python, I excel in problem-solving and GUI development, crafting intuitive interfaces and
+                    robust database applications.</p>
+                <img src="python.png" alt="">
+            </div>
+        </div>
+
+        <div class="description2">
+            <img src="web-development1.png" alt="">
+            <p>Experienced in HTML, CSS, and JavaScript, I craft captivating websites with stunning interfaces,
+                enhancing
+                user experiences.
+            </p>
+        </div>
+        <div class="description3">
+            <img src="C++.png" alt="">
+            <p>Skilled in C++, I craft efficient and robust database applications, applying object-oriented principles
+                for maintainable code. </p>
+        </div>
+        <h2 class="Education">Education</h2>
+        <img class="line" src="Dotline.png" alt="">
+        <div class="education">
+            <div class="bachelor">
+                <p>2022- 2026</p>
+                <p>Bachelor of Engineering in Software Engineering</p>
+                <p>NED University of Engineering & Technology, Karachi, Pakistan</p>
+            </div>
+            <div class="intermediate">
+                <p>2020- 2022</p>
+                <p>Intermediate from Benign Educational Legates for Modern Sciences, Karach</p>
+                <p>92.7%</p>
+            </div>
+            <div class="secondary">
+                <p>2018- 2020</p>
+                <p>Embellish School System</p>
+                <p>90%</p>
+            </div>
+        </div>
+
+
+        <div class="contact-me">
+            <div class="contact">
+                <textarea id="message" name="message" cols="50" rows="5" required></textarea>
+            </div>
+            <div class="btn1">
+                <button>Send Message</button>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
