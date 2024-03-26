@@ -1,0 +1,188 @@
+body {
+    background-color: rgb(189, 181, 213);
+    background-image: linear-gradient(45deg, #FFD0D2, #E6D0FF);
+}
+
+.container {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    display: block;
+    width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    border: 1px;
+    border-radius: 5px;
+
+}
+
+.head a {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(112, 96, 163);
+}
+
+.todo img {
+    position: relative;
+    left: 0;
+    width: 2cm;
+}
+
+.notes {
+    position: relative;
+    left: 25%;
+    margin-top: -60px;
+}
+
+input[type="text"] {
+    background-color: #fbfbea;
+    width: 250px;
+    height: 30px;
+    border: 2px solid rgb(197, 187, 225);
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 8px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+.notes button {
+    position: absolute;
+    bottom: -60px;
+    left: 25%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: purple;
+    width: 47px;
+    height: 46px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid rgb(197, 187, 225);
+    border-radius: 50%;
+    background-color: gold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.notes button:hover {
+    background-image: linear-gradient(45deg, #FFD0D2, #E6D0FF);
+}
+
+
+.bx {
+    font-family: 'Boxicons';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+
+ul#tasktodo {
+    position: relative;
+    left: 35%;
+    top: 10px;
+}
+
+ul#tasktodo li {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Changa One", sans-serif;
+    padding-left: 50px;
+    padding-top: 9px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    color: #716d6d;
+    background-color: #fbfbea;
+    border: 2px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 12px;
+    width: 8cm;
+    height: 0.9cm;
+    margin-left: -250px;
+    position: relative;
+
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    border-radius: 50%;
+    background-image: url("circle.png");
+    background-size: cover;
+    background-position: center;
+    top: 5px;
+    left: 8px;
+}
+
+ul li.completed {
+    color: black;
+    text-decoration: line-through;
+
+}
+
+ul li.completed::before {
+    background-image: url("check.png");
+}
+
+ul li img {
+    position: absolute;
+    right: 2px;
+    top: 5px;
+}
+
+ul li img:hover {
+
+    background-color: rgb(189, 181, 213);
+    border-radius: 50%;
+}
+
+#completedList {
+    position: relative;
+    left: 35%;
+    top: 10px;
+}
+
+#completedList li {
+    list-style: none;
+    user-select: none;
+    cursor: default;
+    font-size: 16px;
+    font-family: "Changa One", sans-serif;
+    padding-left: 50px;
+    padding-top: 9px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    color: #716d6d;
+    background-color: white;
+    border: 2px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 12px;
+    width: 8cm;
+    height: 0.9cm;
+    margin-left: -250px;
+    position: relative;
+}
+
+#completedList li::before {
+
+    background-image: url("check.png");
+}
+
+span {
+    position: absolute;
+    right: 10px;
+}
