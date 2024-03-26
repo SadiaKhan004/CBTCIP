@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <a onclick="showCompletedTasks()" href="#completedTasks">Tasks Completed</a>
+        </div>
+        <div class="todo">
+            <img src="todo.png" alt="">
+        </div>
+        <div class="notes">
+            <input type="text" placeholder="to-do-list" name="to-do-list" id="to-do-list">
+            <button onclick="taskadded()"><i class='bx bx-plus'></i></button>
+            <div class="select" id="select">
+            </div>
+            <div id="tasks">
+                <ul id="tasktodo">
+                </ul>
+            </div>
+            <div id="completedTasks">
+                <ul id="completedList"></ul>
+            </div>
+        </div>
+        <script src="todolist.js"></script>
+
+</body>
+
+</html>
