@@ -1,0 +1,42 @@
+let task = document.getElementById("to-do-list");
+let list_tasks = document.getElementById("tasktodo");
+let completedList = document.getElementById("completedList");
+function taskadded() {
+    if (task.value === "") {
+        alert("Please add task")
+    }
+    else {
+        let li = document.createElement("li");
+        li.innerHTML = task.value;
+        list_tasks.appendChild(li);
+        let img = document.createElement("img");
+        img.src = "cross.png";
+        img.style.width = "30px";
+        img.style.height = "30px";
+        li.appendChild(img);
+    }
+    task.value = "";
+
+}
+list_tasks.addEventListener("click", function (event) {
+    if (event.target.tagName === 'LI') {
+        event.target.classList.toggle("completed");
+    } else if (event.target.tagName === "IMG") {
+        event.target.parentElement.remove();
+    }
+
+});
+function showCompletedTasks() {
+    let completedTasks = document.querySelectorAll('#tasktodo li.completed');
+
+    completedTasks.forEach(function (task) {
+        let li = document.createElement('li');
+        li.textContent = task.textContent;
+        let time = new Date().toLocaleTimeString();
+        let span = document.createElement("span");
+        span.textContent = "Completed at: " + time;
+        li.appendChild(span);
+        completedList.appendChild(li);
+    });
+    completedList.style.display = "block";
+}
